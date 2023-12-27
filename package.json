@@ -1,0 +1,28 @@
+{
+	"name": "strx",
+	"version": "1.0.0",
+	"description": "Yet another flexible template engine.",
+	"main": "index.js",
+	"keywords": [
+		"str-temp",
+		"strx",
+		"temp",
+		"template",
+		"string",
+		"format",
+		"replace",
+		"arguments",
+		"readable",
+		"accessibility"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mrbing47/strx.git"
+	},
+	"author": "Sarthik Garg",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mrbing47/strx/issues"
+	},
+	"homepage": "https://github.com/mrbing47/strx#readme"
+}
