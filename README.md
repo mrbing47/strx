@@ -4,6 +4,14 @@ Yet another flexible template engine.
 
 You can simply store and pass values to the produce the final string. Use templates in your string by using `{}`.
 
+## Install
+
+```bash
+npm i strx
+```
+
+However, you can install the package from any other package-manager (like yarn, bun, etc.) which forks from **NPM Registry**.
+
 ## Basic
 
 -   The program adds the data to the template brackets based on a predefined flow. The function will take it's first argument as the
