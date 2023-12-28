@@ -9,9 +9,7 @@ You can simply store and pass values to the produce the final string. Use templa
 -   The program adds the data to the template brackets based on a predefined flow. The function will take it's first argument as the
     **template string** and then either return a function to pass the data or a string if all the templates have received the data.
 
--   You can escape the brackets by using `{{}}`.
-
--   The data is passed as normal arguments to the function and all the objects are concated together.
+-   The data is passed as normal arguments to the function, all non object data are added in an array whereas all the objects are combined together.
 
 -   The indexes are greedy and will grab the data for themselves. You can defined same index and keys multiple times.
 
