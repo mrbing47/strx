@@ -120,6 +120,9 @@ const stackOverflow = error("STACK_OVERFLOW")
 console.log(stackOverflow("Maximum recursion stack is reached."))
 // ERROR: STACK_OVERFLOW Maximum recursion stack is reached.
 
+console.log(warn("UNUSED_VARIABLE","The stack is almost at it's limit."))
+// WARN: UNUSED_VARIABLE The stack is almost at it's limit.
+
 ```
 
 ## APIS
