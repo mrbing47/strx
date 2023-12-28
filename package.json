@@ -1,6 +1,6 @@
 {
 	"name": "strx",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Yet another flexible template engine.",
 	"main": "index.js",
 	"keywords": [
