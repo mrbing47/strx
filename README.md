@@ -2,7 +2,7 @@
 
 Yet another flexible template engine.
 
-You can simply store and pass values to the produce the final string. Use templates in your string using `{}`.
+You can simply store and pass values to the produce the final string. Use templates in your string by using `{}`.
 
 ## Basic
 
