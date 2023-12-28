@@ -92,7 +92,39 @@ strx("{fruit[1]} is tasty 🤤.", { fruit: [ "Banana", "Apple", "Orange"] })
 
 Try combining it with [chalk.js](https://www.npmjs.com/package/chalk) to see the different possibilities.
 
-## Current State
+## Rolling Index Example
+
+Following is an example of rolling index.
+
+```Javascript
+strx("{1} {2} {0} {} {} {6} {7}")(1, 2, 3, 4, 5, 6, 7, 8)
+>> 2 3 1 4 5 7 8
+```
+
+## Usage
+
+The `strx()` function will take a string as it's first argument and optional `...args` as data to place inside string. Until all the templates are satisfied, ie, have data value other than `undefined`. The function will return another function for the user to enter the values. Once all the templates have a value other than `undefined`, the function will return a string.
+
+```Javascript
+
+const strx = require("strx")
+
+const consoleFormat = strx("{~LEVEL~}: {~TYPE~} {~detailed error message~}");
+
+const warn = consoleFormat("WARN");
+const error = consoleFormat("ERROR");
+
+
+const stackOverflow = error("STACK_OVERFLOW")
+
+console.log(stackOverflow("Maximum recursion stack is reached."))
+>>ERROR: STACK_OVERFLOW Maximum recursion stack is reached.
+
+```
+
+## APIS
+
+### Current State
 
 Current state of the `templates` in returned function:
 
@@ -116,13 +148,4 @@ console.log(message.templates);
   array: [],
   key: [],
 }
-```
-
-## Rolling Index
-
-Following is an example of rolling index.
-
-```Javascript
-strx("{1} {2} {0} {} {} {6} {7}")(1, 2, 3, 4, 5, 6, 7, 8)
->> 2 3 1 4 5 7 8
 ```

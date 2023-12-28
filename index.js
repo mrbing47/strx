@@ -158,6 +158,7 @@ function strx(string, ...args) {
 		);
 	}
 
+	process.templates = templates;
 	return args.length > 0 ? process(...args) : process;
 }
 
