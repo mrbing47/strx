@@ -19,7 +19,7 @@ You can simply store and pass values to the produce the final string. Use templa
 ## Escape Character
 
 To escape the brackets and prevent yourself from errors, use `{{` and `}}`
-and the code will treat the brackets like normal characters.
+and the engine will treat the brackets like normal characters.
 
 ```Javascript
 strx("{~message~} {~name~} {{🙃}}", "Hello", "Node");
@@ -30,7 +30,7 @@ strx("{~message~} {~name~} {{🙃}}", "Hello", "Node");
 
 -   ### Empty
 
-You can simply use `{}` where you want to substitute data in the string. The data will be picked and placed from `left to right`. Brackets with comments **( eg. {\~message\~}` )** will be also **treated as empty brackets**.
+You can simply use `{}` where you want to substitute data in the string. The data will be picked and placed from `left to right`.
 
 ```Javascript
 strx("{} {} {} {}", "A")("B", "C", "D")
@@ -39,7 +39,7 @@ strx("{} {} {} {}", "A")("B", "C", "D")
 
 -   ### Comments
 
-You can use comments in `{}` by writing the text between `~` for better readability. They will be treated same as empty brackets.
+You can use comments in `{}` by writing the text between `~` for better readability. They will be **treated same as empty brackets**.
 
 ```Javascript
 strx("{~message~} {~name~}", "Hello", "Node");
@@ -87,7 +87,7 @@ With the nested objects, there will be arrays and you will be able to pass those
 
 ```Javascript
 strx("{fruit[1]} is tasty 🤤.", { fruit: [ "Banana", "Apple", "Orange"] })
->> Apple  is tasty 🤤.
+>> Apple is tasty 🤤.
 ```
 
 Try combining it with [chalk.js](https://www.npmjs.com/package/chalk) to see the different possibilities.
@@ -100,6 +100,8 @@ Following is an example of rolling index.
 strx("{1} {2} {0} {} {} {6} {7}")(1, 2, 3, 4, 5, 6, 7, 8)
 >> 2 3 1 4 5 7 8
 ```
+
+In the above example, as **index 5** is not mentioned and there was a lack of empty brackets, **value 6** was _skipped_.
 
 ## Usage
 
