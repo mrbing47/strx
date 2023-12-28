@@ -118,7 +118,7 @@ const error = consoleFormat("ERROR");
 const stackOverflow = error("STACK_OVERFLOW")
 
 console.log(stackOverflow("Maximum recursion stack is reached."))
->>ERROR: STACK_OVERFLOW Maximum recursion stack is reached.
+// ERROR: STACK_OVERFLOW Maximum recursion stack is reached.
 
 ```
 
